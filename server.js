@@ -6,12 +6,13 @@ var port = process.env.PORT || 8080;
 // again. CORS Anywhere is open by design, and this blacklist is not used, except for countering
 // immediate abuse (e.g. denial of service). If you want to block all origins except for some,
 // use originWhitelist instead.
-var originBlacklist = (process.env.CORSANYWHERE_BLACKLIST || '').split(',');
+//var originBlacklist = (process.env.CORSANYWHERE_BLACKLIST || '').split(',');
 
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
-  originBlacklist: originBlacklist,
-  requireHeader: ['origin', 'x-requested-with'],
+  originWhitelist:['api.instagram.com'],
+  //originBlacklist: originBlacklist,
+  //requireHeader: ['origin', 'x-requested-with'],
   removeHeaders: [
     'cookie',
     'cookie2',
