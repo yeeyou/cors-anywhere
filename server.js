@@ -1,5 +1,5 @@
 // Heroku defines the environment variable PORT, and requires the binding address to be 0.0.0.0
-var host = process.env.PORT ? '0.0.0.0' : '188.166.246.222';
+var host = process.env.PORT ? '0.0.0.0' : '173.255.209.98';
 var port = process.env.PORT || 8080;
 
 // Grab the blacklist from the command-line so that we can update the blacklist without deploying
