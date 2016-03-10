@@ -10,7 +10,7 @@ var port = process.env.PORT || 8080;
 
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
-  originWhitelist:['api.instagram.com'],
+  //originWhitelist:['api.instagram.com'],
   //originBlacklist: originBlacklist,
   //requireHeader: ['origin', 'x-requested-with'],
   removeHeaders: [
